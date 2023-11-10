@@ -1,4 +1,3 @@
-// https://gophercoding.com/convert-heic-to-jpeg-go/
 package main
 
 import (
@@ -24,13 +23,14 @@ func main() {
   if len(os.Args) > 1 {
 	  heicPaths := getHeicPath(os.Args[1:])
 		if len(heicPaths) > 0 {
-			for _, heicPath := range heicPaths {
+			for i, heicPath := range heicPaths {
 				err := convertHeicToJpg(heicPath, getFileNameNoExt(heicPath) + ".jpg")
 				if err != nil {
 					log.Fatal(err)
 				}	
+				fmt.Printf("  > 第 %d 个文件 %s 转换完成...\n",i+1,heicPath)
 			}
-			fmt.Println("  > 全部文件转换完成！")
+			fmt.Printf("  > 共 %d 个文件已全部转换完成！\n",len(heicPaths))
 		} 
 	}else{
 		fmt.Println("  > 请指定heic文件路径或所在目录路径...")
