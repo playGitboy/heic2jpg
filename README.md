@@ -1,5 +1,5 @@
 ## heic2jpg
-将从ios中导出的HEIC格式图片批量转化为常见的JPG格式(保留EXIF信息)  
+将HEIC格式图片批量转化为常见的JPG格式(保留EXIF信息)  
 
 Golang实现，支持多系统平台，单文件轻量无依赖  
 
@@ -8,7 +8,7 @@ Golang实现，支持多系统平台，单文件轻量无依赖
 * CLI下支持目录参数(扫描处理指定目录下所有heic格式文件)如`heic2jpg.exe ./heicImgs`，也支持多文件参数如`heic2jpg.exe 2.heic 43.heic` 
 
 ## 编译  
-如果带`-ldflags`参数编译，程序直接运行不显示终端窗口  
+注意如果带`-H=windowsgui`参数编译，程序直接运行不显示终端窗口  
 `go build -gcflags=-trimpath=$GOPATH -asmflags=-trimpath=$GOPATH -ldflags "-w -s" -ldflags -H=windowsgui`
 
 ## Reference:
