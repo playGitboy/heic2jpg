@@ -11,9 +11,9 @@
 将以下内容保存为a.reg双击导入注册表(注意修改Heic2Jpg.dll路径)，在*.heic文件右键选择"Heic2Jpg"菜单即可自动调用转换功能——转换后会在同目录生成同名jpg文件（支持批量选择处理）  
 
 `
-Windows Registry Editor Version 5.00
-[HKEY_CLASSES_ROOT\SystemFileAssociations\.heic\Shell\Heic2Jpg\command]
-@="rundll32.exe D:\\Tool\\Heic2Jpg.dll,Heic2Jpg %1"
+Windows Registry Editor Version 5.00  
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.heic\Shell\Heic2Jpg\command]  
+@="rundll32.exe D:\\Tool\\Heic2Jpg.dll,Heic2Jpg %1"  
 `
 
 ## Reference:
